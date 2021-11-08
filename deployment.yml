@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carfast.service.parser.kolesa.phoneprovider
+spec:
+  selector:
+    matchLabels:
+      app: carfast.service.parser.kolesa.phoneprovider
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: carfast.service.parser.kolesa.phoneprovider
+    spec:
+      containers:
+        - name: service-parser-kolesa-pnone-provider
+          image: {{image}}
+          env:
+            - name: ENVIRONMENT
+              value: {{environment}}
+      imagePullSecrets:
+        - name: myregistrykey

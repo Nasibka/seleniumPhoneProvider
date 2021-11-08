@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carfast.service.parser.webdriver
+spec:
+  selector:
+    matchLabels:
+      app: carfast.service.parser.webdriver
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: carfast.service.parser.webdriver
+    spec:
+      containers:
+        - name: webdriver
+          image: selenium/standalone-chrome:3.141.59
+          ports:
+            - containerPort: 4444
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: carfast-service-parser-webdriver
+spec:
+  ports:
+    - port: 4444
+      targetPort: 4444
+  selector:
+    app: carfast.service.parser.webdriver

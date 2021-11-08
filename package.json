@@ -1,0 +1,20 @@
+{
+  "name": "carfast.service.parser.kolesa.phoneprovider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "staging": "ENVIRONMENT=staging node cron.js",
+    "production": "node cron.js",
+    "local": "ENVIRONMENT=local node cron.js"
+  },
+  "dependencies": {
+    "cron": "^1.8.2",
+    "mongoose": "^5.13.5",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
