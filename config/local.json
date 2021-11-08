@@ -3,7 +3,7 @@
     "db": "mongodb://127.0.0.1:27017/kolesaparser",
     "getPhonesCron": "* * * * *",
     "webdriverServer": "http://localhost:4444/wd/hub",
-    "proxyLogin":"sd1vsSQ",
-    "proxyPass":"jfLK32IR1bn2",
+    "proxyLogin":"*******",
+    "proxyPass":"*******",
     "useProxy":false
 }
